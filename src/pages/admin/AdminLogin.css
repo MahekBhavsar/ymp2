@@ -53,6 +53,23 @@
   display: block;
 }
 
+.admin-login-form input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.admin-login-form input:focus {
+  outline: none;
+  border-color: var(--color-text-primary);
+}
+
 .admin-login-btn {
   margin-top: 1rem;
   background-color: var(--color-text-primary);
