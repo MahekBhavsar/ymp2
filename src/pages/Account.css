@@ -1,0 +1,45 @@
+.account-page { padding: 2rem 0 4rem; }
+.account-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+.account-header h1 { font-size: 2.5rem; }
+
+.account-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+.account-card {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: 2rem; background: var(--color-surface); border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md); transition: var(--transition);
+}
+.account-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.account-card svg { margin-bottom: 1rem; color: var(--color-accent-gold); }
+.account-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; font-family: var(--font-body); }
+.account-card p { color: var(--color-text-secondary); font-size: 0.95rem; }
+
+.recent-orders h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+.orders-table-wrap { overflow-x: auto; }
+.orders-table {
+  width: 100%; border-collapse: collapse; background: var(--color-surface);
+  border: 1px solid var(--color-border-light); border-radius: var(--radius-md); overflow: hidden;
+}
+.orders-table th {
+  text-align: left; padding: 14px 16px; font-size: 0.85rem;
+  text-transform: uppercase; letter-spacing: 1px; color: var(--color-text-secondary);
+  background: var(--color-accent-beige);
+}
+.orders-table td { padding: 14px 16px; border-bottom: 1px solid var(--color-border-light); }
+.order-id { font-weight: 600; font-family: monospace; }
+.order-total { font-weight: 600; }
+
+.status-badge {
+  padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 500;
+  text-transform: capitalize;
+}
+.status-pending { background: #FEF3C7; color: #92400E; }
+.status-confirmed { background: #DBEAFE; color: #1E40AF; }
+.status-processing { background: #E0E7FF; color: #3730A3; }
+.status-shipped { background: #D1FAE5; color: #065F46; }
+.status-delivered { background: #D1FAE5; color: #065F46; }
+.status-cancelled { background: #FEE2E2; color: #991B1B; }
+
+@media (max-width: 768px) {
+  .account-grid { grid-template-columns: 1fr; }
+  .account-header { flex-direction: column; gap: 1rem; align-items: flex-start; }
+}

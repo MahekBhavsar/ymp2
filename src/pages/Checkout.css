@@ -1,0 +1,62 @@
+.checkout-page { padding: 2rem 0 4rem; }
+.checkout-title { font-size: 2.5rem; margin-bottom: 2rem; }
+
+.checkout-layout {
+  display: grid; grid-template-columns: 1fr 400px; gap: 2rem; align-items: start;
+}
+
+.checkout-section {
+  background: var(--color-surface); border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md); padding: 2rem; margin-bottom: 1.5rem;
+}
+.checkout-section h2 { font-size: 1.3rem; margin-bottom: 1.5rem; }
+
+.form-row.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+.shipping-options { display: flex; flex-direction: column; gap: 0.75rem; }
+.shipping-option {
+  display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem;
+  border: 1px solid var(--color-border); border-radius: var(--radius-md);
+  cursor: pointer; transition: var(--transition);
+}
+.shipping-option.selected { border-color: var(--color-text-primary); background: var(--color-accent-beige); }
+.shipping-option input { accent-color: var(--color-text-primary); }
+.shipping-option div {
+  display: flex; justify-content: space-between; flex: 1; align-items: center;
+}
+
+.payment-placeholder {
+  text-align: center; padding: 2rem;
+  background: var(--color-accent-peach); border-radius: var(--radius-md);
+}
+
+.checkout-summary {
+  background: var(--color-surface); border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md); padding: 2rem; position: sticky; top: 100px;
+}
+.checkout-summary h3 { font-size: 1.3rem; margin-bottom: 1.5rem; }
+
+.checkout-item {
+  display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;
+}
+.checkout-item img {
+  width: 60px; height: 60px; border-radius: var(--radius-md); object-fit: cover;
+}
+.checkout-item div { flex: 1; }
+.checkout-item-name { font-weight: 500; font-size: 0.95rem; }
+.checkout-item-qty { color: var(--color-text-secondary); font-size: 0.85rem; }
+.checkout-item > span { font-weight: 600; }
+
+.summary-divider { height: 1px; background: var(--color-border-light); margin: 1rem 0; }
+.summary-row {
+  display: flex; justify-content: space-between; padding: 0.5rem 0; font-size: 0.95rem;
+}
+.summary-row.total {
+  border-top: 2px solid var(--color-text-primary); margin-top: 0.5rem;
+  padding-top: 1rem; font-weight: 600; font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .checkout-layout { grid-template-columns: 1fr; }
+  .form-row.two-col { grid-template-columns: 1fr; }
+}

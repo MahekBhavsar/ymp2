@@ -1,0 +1,105 @@
+.breadcrumb {
+  display: flex; align-items: center; gap: 8px; padding: 1.5rem 0;
+  font-size: 0.9rem; color: var(--color-text-secondary);
+}
+.breadcrumb a:hover { color: var(--color-text-primary); }
+
+.product-detail-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding-bottom: 3rem;
+}
+
+.gallery-main {
+  border-radius: var(--radius-lg); overflow: hidden;
+  background: var(--color-accent-beige); aspect-ratio: 1;
+}
+.gallery-main img { width: 100%; height: 100%; object-fit: cover; }
+
+.gallery-thumbs { display: flex; gap: 10px; margin-top: 1rem; }
+.thumb {
+  width: 70px; height: 70px; border-radius: var(--radius-md);
+  overflow: hidden; border: 2px solid transparent; transition: var(--transition); cursor: pointer;
+}
+.thumb.active { border-color: var(--color-text-primary); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.product-detail-category {
+  font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--color-text-secondary); margin-bottom: 0.5rem;
+}
+.product-info h1 { font-size: 2.2rem; margin-bottom: 1rem; }
+
+.product-detail-rating {
+  display: flex; align-items: center; gap: 4px; margin-bottom: 1.5rem;
+}
+.product-detail-rating span { margin-left: 8px; color: var(--color-text-secondary); font-size: 0.9rem; }
+
+.product-detail-price {
+  display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;
+}
+.detail-price-current { font-size: 1.8rem; font-weight: 600; }
+.detail-price-original { font-size: 1.2rem; text-decoration: line-through; color: var(--color-text-secondary); }
+.detail-discount {
+  background: var(--color-accent-blush); padding: 4px 12px;
+  border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 500;
+}
+
+.product-description {
+  color: var(--color-text-secondary); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.05rem;
+}
+
+.product-meta {
+  padding: 1.5rem 0; border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light); margin-bottom: 1.5rem;
+}
+.product-meta p { margin-bottom: 0.5rem; font-size: 0.95rem; }
+.product-meta .in { color: #2d8a4e; font-weight: 500; }
+.product-meta .out { color: #c0392b; font-weight: 500; }
+
+.product-actions-detail {
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+}
+
+.quantity-selector {
+  display: flex; align-items: center; border: 1px solid var(--color-border);
+  border-radius: var(--radius-full); overflow: hidden;
+}
+.quantity-selector button {
+  padding: 10px 14px; display: flex; align-items: center;
+  transition: var(--transition);
+}
+.quantity-selector button:hover { background: var(--color-accent-beige); }
+.quantity-selector span {
+  padding: 0 16px; font-weight: 600; font-size: 1rem;
+  min-width: 40px; text-align: center;
+}
+
+.loading-skeleton {
+  height: 60vh; background: linear-gradient(90deg, var(--color-accent-beige) 25%, #f0ebe4 50%, var(--color-accent-beige) 75%);
+  background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: var(--radius-lg);
+}
+
+/* Reviews */
+.reviews-section { max-width: 800px; margin: 0 auto; }
+.reviews-list { display: flex; flex-direction: column; gap: 1.5rem; margin: 2rem 0; }
+.review-card {
+  padding: 1.5rem; background: var(--color-surface);
+  border: 1px solid var(--color-border-light); border-radius: var(--radius-md);
+}
+.review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+.review-stars { display: flex; gap: 2px; }
+.review-card p { color: var(--color-text-secondary); line-height: 1.6; }
+
+.review-form {
+  margin-top: 2rem; padding: 2rem; background: var(--color-surface);
+  border: 1px solid var(--color-border-light); border-radius: var(--radius-md);
+}
+.review-form h3 { margin-bottom: 1rem; }
+.review-rating-input { display: flex; gap: 4px; margin-bottom: 1rem; }
+.review-rating-input button { padding: 4px; }
+.review-form textarea { margin-bottom: 1rem; resize: vertical; }
+
+@media (max-width: 768px) {
+  .product-detail-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .product-info h1 { font-size: 1.8rem; }
+  .product-actions-detail { flex-direction: column; align-items: stretch; }
+}
